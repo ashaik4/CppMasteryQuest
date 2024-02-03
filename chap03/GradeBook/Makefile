@@ -5,7 +5,7 @@ INCLUDES=-Iincludes/
 # Using wildcard to include all .cpp files in the src directory
 SRCS=$(wildcard src/*.cpp)
 OBJS=$(SRCS:.cpp=.o)
-EXEC=bin/exec
+EXEC=bin/a.out
 
 # Define the target to make the executable
 $(EXEC): $(OBJS)
