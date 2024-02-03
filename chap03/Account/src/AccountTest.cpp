@@ -12,7 +12,14 @@ int main(){
     // try default constructor
     // Account account3; ==> this line will throw an error because we have no default constructor. 
     // Default constructor is only provided if no constructor is defined.
-    
+
+    // Create more Account objects that use both `name` and `balance`
+    Account account3{"John Appleseed", 50};
+    Account account4{"Sony Ericsson", 100};
+    std::cout << "account3 name is: " << account3.getName() <<"\t" << "Balance is: "<< account3.getBalance() << std::endl;
+    std::cout << "account4 name is: " << account4.getName() <<"\t" << "Balance is: "<< account4.getBalance() << std::endl;
+
+
     
     return 0;
 }
