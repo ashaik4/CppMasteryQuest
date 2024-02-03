@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "GasMileage.h"
 
 int main(){
@@ -7,6 +8,7 @@ int main(){
     int gallonsUsed{0};
     int totalMiles{0};
     int totalGallons{0};
+    std::cout<< std::fixed << std::setprecision(5);
     while (milesDriven != -1){
         
         std::cout<< "Enter miles driven (-1 to quit): "<< std::endl;

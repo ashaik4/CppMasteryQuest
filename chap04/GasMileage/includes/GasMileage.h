@@ -4,10 +4,13 @@
 
 #include <iostream>
 #include <string>
+#include<iomanip>
 
 class GasMileage{
     public: 
         GasMileage(int miles, int gallons):milesDriven{miles}, gallonsUsed{gallons}{
+            std::cout<< std::fixed << std::setprecision(5);
+            
             
         }
         void setMiles(int miles){
@@ -36,7 +39,7 @@ class GasMileage{
         void displayMPG(){
             std::cout<< "MPG this trip: " << calculateMPGForTrip() << std::endl;
         }
-        
+
     private: 
         int milesDriven{0};
         int gallonsUsed{0};
