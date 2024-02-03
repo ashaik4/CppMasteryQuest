@@ -25,6 +25,17 @@ int main(){
     account3.withdraw(100);
     std::cout<< "After withdrawing 100, account3 balance is: " << account3.getBalance() << std::endl;
 
+    // Test getline and setName
+    std::string name;
+    int initialBalance{0};
+    std::cout << "Enter a new name for account5: ";
+    std::getline(std::cin, name);
+    std::cout << "Enter the initial balance for the account: " << name << std::endl;
+    std::cin >> initialBalance;
+    Account account5{name, initialBalance};
+    std::cout << "account5 details: "<< std::endl;
+    account5.displayMessage();
+
 
     
     return 0;

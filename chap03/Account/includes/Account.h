@@ -33,6 +33,10 @@ class Account{
                 balance = balance + depositAmount;
             }
         }
+        void displayMessage() const {
+            std::cout << "Account name: " << name << std::endl;
+            std::cout << "Account balance: " << balance << std::endl;
+        }
 
         
 
