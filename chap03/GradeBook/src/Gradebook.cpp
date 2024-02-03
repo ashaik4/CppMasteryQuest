@@ -24,4 +24,3 @@ std::string GradeBook::getCourseName(){
 void GradeBook::displayMessage(){
     std::cout << "Welcome to the grade book for\n" << getCourseName() << "!\n" << std::endl;
 }
-```
