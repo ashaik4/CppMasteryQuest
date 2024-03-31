@@ -40,3 +40,21 @@ void LinkedList::insertAtHead(int value){
     std::cout << value << " Inserted! ";
 
 }
+
+void LinkedList::insertAtTail(int value){
+    if (head !=nullptr){
+        Node *tail = head; 
+        while (tail->nextElement != nullptr){
+            tail = tail->nextElement;
+        }
+        Node *newNode = new Node();
+        newNode->data = value;
+        tail->nextElement = newNode;
+        newNode->nextElement = nullptr;
+        tail = newNode;
+    }
+    else{
+        LinkedList::insertAtHead(value);
+    }
+    
+}
