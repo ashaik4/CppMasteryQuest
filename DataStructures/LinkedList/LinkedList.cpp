@@ -42,7 +42,9 @@ void LinkedList::insertAtHead(int value){
 }
 
 void LinkedList::insertAtTail(int value){
-    if (head !=nullptr){
+    if (isEmpty()){
+        insertAtHead(value);
+    }else{
         Node *tail = head; 
         while (tail->nextElement != nullptr){
             tail = tail->nextElement;
@@ -53,8 +55,6 @@ void LinkedList::insertAtTail(int value){
         newNode->nextElement = nullptr;
         tail = newNode;
     }
-    else{
-        LinkedList::insertAtHead(value);
-    }
+
     
 }
