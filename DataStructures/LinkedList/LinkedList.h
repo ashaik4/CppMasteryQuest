@@ -24,4 +24,8 @@ class LinkedList{
         bool printList();
         void insertAtHead(int value);
         void insertAtTail(int value);
+        bool search(int value);
+        bool deleteAtHead();
+        bool deleteByValue(int value);
+        int length();
 };

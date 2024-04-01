@@ -55,6 +55,61 @@ void LinkedList::insertAtTail(int value){
         newNode->nextElement = nullptr;
         tail = newNode;
     }
+}
 
-    
+bool LinkedList::search(int value){
+    head = getHead();
+    Node * current = head;
+    while (current!=nullptr){
+        if (current->data == value){
+            return true;
+        }
+        current = current->nextElement;
+    }
+    return false;
+}
+
+bool LinkedList::deleteAtHead(){
+    if (isEmpty()){
+        std::cout<< "List is empty"<< std::endl;
+    }
+
+    Node *currentNode = head;
+    head = head->nextElement;
+    delete currentNode;
+    return true;
+}
+
+bool LinkedList::deleteByValue(int value){
+    Node* current = getHead();
+    Node* prev = current;
+    if (current->data==value){
+        return deleteAtHead();
+    }
+    current = current->nextElement;
+    while (current!=nullptr){
+        if (current->data==value){
+            prev->nextElement = current->nextElement;
+            delete current;
+            return true;
+
+        }
+        current = current->nextElement;
+        prev = prev->nextElement;
+
+    }
+    return false;
+}
+
+int LinkedList::length(){
+    int length = 0;
+    if (isEmpty()){
+        return length;
+    }
+    Node* current = getHead();
+    while(current!=nullptr){
+        length += 1;
+        current = current->nextElement;
+    }
+    return length;
 }
