@@ -28,4 +28,5 @@ class LinkedList{
         bool deleteAtHead();
         bool deleteByValue(int value);
         int length();
+        Node* reverse(); 
 };

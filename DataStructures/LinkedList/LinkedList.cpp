@@ -113,3 +113,29 @@ int LinkedList::length(){
     }
     return length;
 }
+
+/*
+to reverse two nodes within a linked list: 
+step 1: save current's next pointer in `next`
+step 2: reverse current's pointer to point to prev
+step 3: prev should progress to current 
+step 4: current should progress to `next`(saved in step: 1)
+*/
+Node* LinkedList::reverse(){
+    Node *current = getHead();
+    Node *previous = nullptr;
+    Node *next = nullptr;
+
+    while(current!=nullptr){
+        // save next ptr 
+        next = current->nextElement;
+        // reverse the pointer
+        current->nextElement = previous;
+        // move forward
+        previous = current;
+        current = next;
+    }
+    head = previous;
+    return head;
+
+}
